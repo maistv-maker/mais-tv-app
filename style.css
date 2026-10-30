@@ -1,0 +1,123 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.background {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #0a1628, #0f2a4a);
+  z-index: -2;
+}
+
+.background::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(0, 140, 255, 0.08), transparent 60%);
+  z-index: -1;
+}
+
+.container {
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   padding: 20px;
+}
+
+.titulo-novidades {
+    color: #00ccff;
+    font-size: 28px;
+    text-shadow: 0 0 15px #00ccff, 0 0 30px rgba(0, 204, 255, 0.4);
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.tela-container {
+   position: relative;
+   display: flex;
+    align-items: center;
+    max-width: 850px;
+    width: 100%;
+}
+
+.btn-navegacao {
+   width: 55px;
+   height: 90px;
+   background: linear-gradient(180deg, #1a3a5c, #0c2340);
+   border: 2px solid #00ccff;
+   color: #00ccff;
+   font-size: 28px;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   box-shadow: 0 0 12px rgba(0, 204, 255, 0.4);
+   transition: all 0.2s;
+   z-index: 10;
+}
+
+.btn-navegacao:hover {
+   background: #003355;
+   box-shadow: 0 0 20px rgba(0, 204, 255, 0.7);
+}
+
+.btn-navegacao.esquerdo {
+   border-radius: 8px 0 0 8px;
+   border-right: none;
+}
+
+.btn-navegacao.direito {
+   border-radius: 0 8px 8px 0;
+   border-left: none;
+}
+
+.tela {
+   flex: 1;
+   height: 420px;
+   background: #051020;
+   border: 3px solid #00ccff;
+   box-shadow: 0 0 25px rgba(0, 204, 255, 0.35), inset 0 0 40px rgba(0, 0, 80, 0.5);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   overflow: hidden;
+   position: relative;
+}
+.tela img {
+   max-width: 100%;
+   max-height: 100%;
+   object-fit: contain;
+   display: none;
+}
+
+.tela img.visivel {
+   display: block;
+}
+
+#carregando {
+  color: #5588aa;
+  font-size: 18px;
+}
+
+.logo-area {
+   margin-top: 30px;
+   text-align: center;
+}
+
+.logo-texto {
+   color: #ffffff;
+   font-size: 42px;
+   text-shadow: 0 0 10px #00ccff;
+   letter-spacing: 4px;
+}
